@@ -43,6 +43,5 @@ O **Focus.io** é um bot que te ajuda a organizar o seu dia, gerenciar tarefas, 
 ### Exemplos de comandos
 
 - `.addtask Estudar Python`
-- `.lembrete Beber água em 30 minutos`
-- `.motivacao`
+- `.remindme 30min Beber Agua`
 - `.pomodoro 25`

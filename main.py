@@ -1,5 +1,11 @@
 import discord
+import asyncio
 from discord.ext import commands
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
 # Enable all perms for the bot
 intents = discord.Intents.all()
@@ -11,8 +17,25 @@ async def on_ready():
     print("Bot is ready!")
 
 @bot.command()
-async def init(ctx:commands.Contex):
-    user_name = ctx.author.name 
-    await ctx.reply(f"Olá, {user_name}! Tudo bem?")
+async def init(ctx:commands.Context):
+    user_name = ctx.author.name
+    embed = discord.Embed(
+        description=f"Olá, {user_name}! Tudo bem? Estou aqui para ajudar você a gerenciar seus estudos e afazeres. "
+                    f"Use o comando `.pomodoro <minutos_pomodoro> <minutos_pausa> <ciclos>` para começar.",
+        color=0x57F287  # Verde claro e vivo
+    )
+    await ctx.reply(embed=embed)
 
-bot.run("DISCORD_TOKEN")
+
+
+# Importa comandos dos módulos separados
+from pomodoro import pomodoro
+from reminders import remindme
+from tasks import addtask, listtasks
+
+bot.add_command(pomodoro)
+bot.add_command(remindme)
+bot.add_command(addtask)
+bot.add_command(listtasks)
+
+bot.run(DISCORD_TOKEN)
