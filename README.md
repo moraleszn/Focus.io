@@ -1,47 +1,96 @@
+<p align="center">
+  <img src="Focus.io.jpg" alt="Mascote do Focus.io" width="250"/>
+</p>
 
-# Focus.io 🤖✨
+<h1 align="center">Focus.io</h1>
 
-Um bot de produtividade pessoal com bom humor, feito em Python!
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python Version">
+  <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow" alt="Project Status">
+</p>
 
-## Sobre o projeto
+<p align="center">
+  Seu assistente pessoal de produtividade para o Discord, combinando organização com uma dose de bom humor!
+</p>
 
-O **Focus.io** é um bot que te ajuda a organizar o seu dia, gerenciar tarefas, enviar lembretes e te motivar com frases engraçadas. Ideal para quem quer ser mais produtivo sem perder o bom humor!
+---
 
-### Funcionalidades
+### 📋 Índice
 
-- **Lista de tarefas (To-Do):** Adicione, remova e marque tarefas como concluídas.
-- **Lembretes:** Receba alertas para estudar, beber água, descansar, etc.
-- **Frases motivacionais:** Mensagens engraçadas e motivacionais para animar seu dia.
-- **Pomodoro simples:** Controle o tempo dedicado a cada tarefa.
-- **Relatórios de produtividade:** Veja seu progresso e receba feedback divertido.
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [✨ Funcionalidades Principais](#-funcionalidades-principais)
+- [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+- [🎮 Exemplos de Comandos](#-exemplos-de-comandos)
 
-### Tecnologias utilizadas
+---
 
-- Python 3
-- discord.py (para bots no Discord)
-- sqlite3 ou TinyDB (para armazenar tarefas)
-- requests (para buscar frases motivacionais de APIs externas)
-- (Opcional) Tkinter ou PyQt para interface gráfica
+## 🤖 Sobre o Projeto
 
-### Como usar
+> O **Focus.io** é mais do que um simples bot. Ele foi criado para ser seu parceiro na jornada de organização e estudos, ajudando a gerenciar tarefas, criar lembretes úteis e, claro, te motivar com frases divertidas quando você mais precisar. Ideal para quem quer ser mais produtivo sem perder a leveza do dia a dia!
 
-1. Clone este repositório:
-   ```
-   git clone https://github.com/seu-usuario/focusito.git
-   ```
-2. Instale as dependências:
-   ```
-   pip install -r requirements.txt
-   ```
-3. Configure o token do seu bot no arquivo `main.py`.
-4. Execute o bot:
-   ```
-   python main.py
-   ```
-5. Interaja com o bot no Discord usando comandos como `.addtask`, `.lembrete`, `.pomodoro`, `.motivacao`, etc.
+<br>
 
-### Exemplos de comandos
+## ✨ Funcionalidades Principais
 
-- `.addtask Estudar Python`
-- `.remindme 30min Beber Agua`
-- `.pomodoro 25`
+- **✅ Lista de Tarefas (To-Do):** Adicione, remova, liste e marque tarefas como concluídas diretamente do Discord.
+- **🔔 Lembretes Personalizados:** Configure alertas para estudar, beber água, fazer uma pausa ou qualquer outra atividade importante.
+- **🍅 Timer Pomodoro:** Gerencie seu tempo de foco e descanso com um timer Pomodoro simples e eficaz.
+- **📊 Relatórios de Produtividade:** Acompanhe seu progresso com relatórios divertidos sobre as tarefas concluídas.
+
+<br>
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Python 3**
+- **discord.py** (para a integração com a API do Discord)
+- **python-dotenv** (para gerenciar variáveis de ambiente, como o token do bot)
+
+<br>
+
+### Instalação
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/seu-usuario/focus.io.git](https://github.com/seu-usuario/focus.io.git)
+    cd focus.io
+    ```
+
+2.  **Crie e ative um ambiente virtual (Recomendado):**
+    ```bash
+    python -m venv venv
+    # No Windows:
+    venv\Scripts\activate
+    # No Linux/Mac:
+    source venv/bin/activate
+    ```
+
+3.  **Instale as dependências:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Configure suas variáveis de ambiente:**
+    - Crie um arquivo chamado `.env` na pasta raiz do projeto.
+    - Dentro dele, adicione seu token do bot da seguinte forma:
+      ```
+      DISCORD_TOKEN=SEU_TOKEN_SECRETO_VAI_AQUI
+      ```
+    - *Garanta que o arquivo `main.py` está configurado para ler esta variável.*
+
+5.  **Execute o bot:**
+    ```bash
+    python main.py
+    ```
+
+<br>
+
+## 🎮 Exemplos de Comandos
+
+Uma vez que o bot esteja online no seu servidor, você pode interagir com ele:
+
+-   **Adicionar uma tarefa:** `.addtask Estudar Python por 1 hora`
+-   **Criar um lembrete:** `.remindme 30m Beber água!`
+-   **Iniciar um ciclo Pomodoro:** `.pomodoro 25`
+-   **Ver suas tarefas:** `.tasks`
+
+<br>
