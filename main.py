@@ -3,6 +3,10 @@ import asyncio
 from discord.ext import commands
 from dotenv import load_dotenv
 import os
+from pomodoro import pomodoro
+from reminders import remindme
+from tasks import addtask, listtasks, downloadtasks
+
 
 load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
@@ -29,13 +33,10 @@ async def init(ctx:commands.Context):
 
 
 # Importa comandos dos módulos separados
-from pomodoro import pomodoro
-from reminders import remindme
-from tasks import addtask, listtasks
-
 bot.add_command(pomodoro)
 bot.add_command(remindme)
 bot.add_command(addtask)
 bot.add_command(listtasks)
+bot.add_command(downloadtasks)
 
 bot.run(DISCORD_TOKEN)
