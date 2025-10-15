@@ -1,5 +1,6 @@
 <p align="center">
-  <img src="Focus.io.jpg" alt="Mascote do Focus.io" width="250"/>
+
+  <img width="865" height="1011" alt="Mascote Focus.io" src="https://github.com/user-attachments/assets/65c370e9-f92c-4821-8046-68329634f304" />
 </p>
 
 <h1 align="center">Focus.io</h1>
